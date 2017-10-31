@@ -20,6 +20,6 @@ CREATE TABLE userWorkout (
   repetitions int (3),
   sets int (3),
   totalReps int (4),
-	workoutTime DATETIME NOT NULL,
+	workoutTime DATETIME,
 	PRIMARY KEY (id)
 );
