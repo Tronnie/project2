@@ -1,0 +1,14 @@
+//CSS
+body{
+	box-sizing: border-box;
+	background: #d3d8e2;
+}
+
+
+.jumbotron{
+	background: #575a60;
+}
+.panel-footer{
+	padding: 25px;
+
+}
