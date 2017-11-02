@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Tronnie/project2/issues"
   },
-  "homepage": "https://github.com/Tronnie/project2#readme"
+  "homepage": "https://github.com/Tronnie/project2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0",
+    "path": "^0.12.7"
+  }
 }
