@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Weight Lifting</title><script
+	<title>Weight Lifting</title><script 
 	src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="assets/style.css">
+	<!-- <link rel="stylesheet" href="assets/style.css"> -->
 
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="user.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="assets/style.css">
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	<!-- <link rel="stylesheet" href="assets/style.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="assets/style.css"> -->
 
-
-
+	
+	
 </head>
 <body>
 
@@ -29,57 +30,115 @@
 
 		<div class="container-fluid ">
 			<div class="jumbotron" style="background-color: black; color: white">
-			  <h1 class="display-3 text-center">Let's Workout!</h1>
+			  <h1 class="display-3 text-center">Lets Workout!</h1>
 			  <p class="lead text-center">Workouts</p>
 			</div>
 		</div>
 
+		<select id="total" name="category" style="width: 212px;" onclick='choose()'>
+			<option value="">-Choose A Body Part-</option>
+			<option value="chest">Chest</option>
+			<option value="back">Back</option>
+			<option value="legs">Legs</option>
+			<option value="shoulders">Shoulders</option>
+			<option value="arms">Arms</option>
+			<option value="abs">Abs</option>
+		 </select>
 
-		<div class="container-fluid">
-			<div class="card">
-			  <div class="card-header p-3 mb-2 bg-dark text-white text-center font-weight-bold">
-			    Add Workout
-			  </div>
-			  <div class="card-body">
-				<form>
-					<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Body Part
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Chest</a></li>
-    <li><a href="#">Back</a></li>
-    <li><a href="#">Arms</a></li>
-    <li><a href="#">Legs</a></li>
-    <li><a href="#">Shoulders</a></li>
-    <li><a href="#">Abs</a></li>
-  </ul>
-</div>
-					<div class="form-group">
-						<label for="destination-submit">Workout name</label>
-						<input class="form-control" id="destination-submit" type="text">
-					</div>
-					<div class="form-group">
-						<label for="name-submit">Weight</label>
-						<input class="form-control" id="name-submit" type="text">
-					</div>
-					<div class="form-group">
-						<label for="initialTime-submit">Reps</label>
-						<input class="form-control" id="initialTime-submit" type="text">
-					</div>
-					<div class="form-group">
-						<label for="frequency-submit">Number of sets</label>
-						<input class="form-control" id="frequency-submit" type="text">
-					</div>
-					<button class="btn btn-dark p-3 mb-2 bg-dark text-white" type="button" id="submit-btn">Submit</button>
-				</form>
-			  </div>
+		<select id="chest" name="items" style="display: none">
+			<option value="">-Choose A Workout-</option>
+    		<option value="1">Flat Bench</option>
+    		<option value="2">Incline Bench</option>
+    		<option value="3">Decline Bench</option>
+    		<option value="4">Flat Bench (free)</option>
+    		<option value="5">Incline Bench (free)</option>
+    		<option value="6">Decline Bench (free)</option>
+    		<option value="7">Dumbell Flys</option>
+    		<option value="8">Cable Flys</option>
+		</select>
+
+		<select id="back" name="items" style="display: none">
+			<option value="">-Choose A Workout-</option>
+    		<option value="1">Deadlift</option>
+    		<option value="2">Pull Ups</option>
+    		<option value="3">Barbell Rows</option>
+    		<option value="4">Dumbell Rows</option>
+    		<option value="5">Pull downs</option>
+    		<option value="6">Machine Rows</option>
+		</select>
+
+		<select id="legs" name="items" style="display: none">
+			<option value="">-Choose A Workout-</option>
+    		<option value="1">Squats</option>
+    		<option value="2">Split Squats</option>
+    		<option value="3">Leg Press</option>
+    		<option value="4">Calf Raises</option>
+    		<option value="5">Hamstring Curls</option>
+    		<option value="6">Leg Extensions</option>
+		</select>
+
+		<select id="shoulders" name="items" style="display: none">
+			<option value="">-Choose A Workout-</option>
+    		<option value="1">Military Press</option>
+    		<option value="2">Dumbell Press</option>
+    		<option value="3">Lateral Raises</option>
+    		<option value="4">Forward Raises</option>
+    		<option value="5">Rear Delt Flys</option>
+    		<option value="6">Machine Military Press</option>
+    		<option value="7">Upright Rows</option>
+		</select>
+
+		<select id="abs" name="items" style="display: none">
+			<option value="">-Choose A Workout-</option>
+    		<option value="1">Crunches</option>
+    		<option value="2">Sit ups</option>
+    		<option value="3">Leg Raises</option>
+    		<option value="4">Bicycle Kicks</option>
+    		<option value="5">Flutter Kicks</option>
+    		<option value="6">Russian Twists</option>
+    		<option value="7">Cable Crunches</option>
+		</select>
+
+		<select id="arms" name="items" style="display: none">
+			<option value="">-Choose A Workout-</option>
+    		<option value="1">Barbell Curls (Flat)</option>
+    		<option value="2">Barbell Curls (EZ)</option>
+    		<option value="3">Dumbell Curls (Flat)</option>
+    		<option value="4">Dumbell Curls (Hammer)</option>
+    		<option value="5">Dumbell Curls (Alternate)</option>
+    		<option value="6">Cable Curls (Flat)</option>
+    		<option value="7">Cable Curls (EZ)</option>
+    		<option value="8">Cable Curls (Hammer)</option>
+    		<option value="9">Tri Extensions</option>
+    		<option value="10">Dips</option>
+    		<option value="11">Close Bench</option>
+    		<option value="12">Skullcrushers (Barbell)</option>
+    		<option value="13">Skullcrushers (Dumbell)</option>
+		</select>
+
+
+		<div class="form-group">
+			<label for="destination-submit">Workout name</label>
+			<input class="form-control" id="destination-submit" type="text">
 		</div>
-	</div>
+		<div class="form-group">
+			<label for="name-submit">Weight</label>
+			<input class="form-control" id="name-submit" type="text">
+		</div>
+		<div class="form-group">
+			<label for="initialTime-submit">Reps</label>
+			<input class="form-control" id="initialTime-submit" type="text">
+		</div>
+		<div class="form-group">
+			<label for="frequency-submit">Number of sets</label>
+			<input class="form-control" id="frequency-submit" type="text">
+		</div>
+		<button class="btn btn-dark p-3 mb-2 bg-dark text-white" type="button" id="submit-btn">Submit</button>
 
-<br />
-  <footer class="footer">
+		
+</div>
+
+<footer class="footer">
       <div class="container">
         <p><a href="/api/friendfinder">Weight Lifting API</a>   |  <a href="https://github.com/Tronnie/project2">GitHub Repo</a></p>
       </div>
