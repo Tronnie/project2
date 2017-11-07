@@ -13,9 +13,9 @@ var Work = sequelize.define("work", {
   workoutName: {
     type: Sequelize.STRING
   },
-  userName: {
-  type: Sequelize.STRING
-},
+//   userName: {
+//   type: Sequelize.STRING
+// },
   weight: {
     type: Sequelize.INTEGER
   },
@@ -26,7 +26,7 @@ var Work = sequelize.define("work", {
     type: Sequelize.INTEGER
   },
 }, {
-  timestamps: true
+  timestamps: false
 });
 
 // Syncs with DB
