@@ -6,9 +6,9 @@ var Sequelize = require("sequelize");
 // Creates mySQL connection using Sequelize
 
 
-if(process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else{
+// if(process.env.JAWSDB_URL) {
+//     connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else{
     var sequelize = new Sequelize("sequelize_work", "root", "", {
   host: "localhost",
   dialect: "mysql",
@@ -18,7 +18,7 @@ if(process.env.JAWSDB_URL) {
     idle: 10000
   }
 });
-};
+// };
 
 // Exports the connection for other files to use
 module.exports = sequelize;
