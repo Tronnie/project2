@@ -1,21 +1,29 @@
+/*for home.html only*/
 body{
 	background-image: url("bodybuilding.jpg");
 	width: auto;
   	height: auto;
   	background-repeat: no-repeat;
   	background-attachment: fixed;
-  	background-position: center; 
+  	background-position: center;
 	box-sizing: border-box;
-	
 }
-
 
 .jumbotron{
 	background: white;
+	text-align: center;
 }
+footer{
+  text-align: center;
+  border-top: 5px solid #E0E0E0;
+  margin-top: 5em;
+}
+
 .panel-footer{
-	padding: 25px;
-	
+  text-align: center;
+  font-size: 10px;
+	background-color: black;
+	color: white
 }
 
 .form-group{

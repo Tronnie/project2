@@ -1,13 +1,21 @@
 body{
 	box-sizing: border-box;
-	background: #d3d8e2;
+	/*background: #d3d8e2;*/
 }
 
 
 .jumbotron{
 	background: #575a60;
 }
-.panel-footer{
-	padding: 25px;
+footer{
+  text-align: center;
+  border-top: 5px solid #E0E0E0;
+  margin-top: 5em;
+}
 
+.panel-footer{
+  text-align: center;
+  font-size: 10px;
+	background-color: black;
+	color: white
 }

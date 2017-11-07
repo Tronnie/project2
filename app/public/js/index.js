@@ -20,7 +20,7 @@ $("#submit-btn").on("click", function(event) {
 
 
 
-      var ctx = document.getElementById("myChart");
+    var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -31,10 +31,10 @@ $("#submit-btn").on("click", function(event) {
             backgroundColor: [
                 'rgba(255, 99, 132, 0.1)',
                 'rgba(54, 162, 235, 0.1)',
-                
+
                 'rgba(255, 159, 64, 0.2)'
             ],
-            
+
         }]
     },
     options: {
@@ -54,7 +54,7 @@ $("#submit-btn").on("click", function(event) {
 
 
   $.post("/api/new", newWorkout)
-    
+
     .done(function() {
 
       var row = $("<div>");
@@ -67,12 +67,12 @@ $("#submit-btn").on("click", function(event) {
       row.append("<p> --------------- </p>");
 
       $("#work-area").prepend(row);
-      newWorkout = {}; 
+      newWorkout = {};
 
     });
 
   // Empty each input box by replacing the value with an empty string
-  
+
   $("#muscle").val("");
   $(".workoutName").val("");
   $("#weight").val("");
@@ -95,7 +95,7 @@ $.get("/api/all", function(data) {
       row.append("<p> sets: " + data[i].sets + "</p>");
       row.append("<p> --------------- </p>");
 
-      $("#work-area").prepend(row); 
+      $("#work-area").prepend(row);
 
     }
 
