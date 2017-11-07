@@ -1,0 +1,23 @@
+body{
+	background-image: url("bodybuilding.jpg");
+	width: auto;
+  	height: auto;
+  	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center; 
+	box-sizing: border-box;
+	
+}
+
+
+.jumbotron{
+	background: white;
+}
+.panel-footer{
+	padding: 25px;
+	
+}
+
+.form-group{
+	color: blue;
+}
