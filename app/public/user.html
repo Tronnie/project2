@@ -8,22 +8,23 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
   </head>
   <body>
 
-    <!-- <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
       <div class="container">
       <p class="navbar-text">User Page</p>
         <button id="rando" type="button" class="btn btn-default navbar-btn">Sign in</button>
       </div>
-    </nav> -->
+    </nav>
 
     <div class="container-fluid ">
       <div class="jumbotron" style="background-color: black; color: white">
-        <h1 class="display-3 text-center">Let's Workout!</h1>
-        <p class="lead text-center">Please complete the form with your workout data.</p>
+        <h1 class="display-3 text-center">Lets Workout!</h1>
+        <p class="lead text-center">Workouts</p>
       </div>
     </div>
 
@@ -43,7 +44,7 @@
           </select>
 
           <select id="workoutName" name="items">
-
+            
             <option data-group='Chest' value="Flat Bench">Flat Bench</option>
             <option data-group='Chest' value="Incline Bench">Incline Bench</option>
             <option data-group='Chest' value="Decline Bench">Decline Bench</option>
@@ -53,7 +54,7 @@
             <option data-group='Chest' value="Dumbell Flys">Dumbell Flys</option>
             <option data-group='Chest' value="Cable Flys">Cable Flys</option>
             <option data-group='Chest' value="">-Choose A Workout-</option>
-
+            
             <option data-group='Back' value="Deadlift">Deadlift</option>
             <option data-group='Back' value="Pull Ups">Pull Ups</option>
             <option data-group='Back' value="Barbell Rows">Barbell Rows</option>
@@ -61,7 +62,7 @@
             <option data-group='Back' value="Pull downs">Pull downs</option>
             <option data-group='Back' value="Machine Rows">Machine Rows</option>
             <option data-group='Back' value="">-Choose A Workout-</option>
-
+            
             <option data-group='Legs' value="Squats">Squats</option>
             <option data-group='Legs' value="Split Squats">Split Squats</option>
             <option data-group='Legs' value="Leg Press">Leg Press</option>
@@ -69,7 +70,7 @@
             <option data-group='Legs' value="Hamstring Curls">Hamstring Curls</option>
             <option data-group='Legs' value="Leg Extensions">Leg Extensions</option>
             <option data-group='Legs' value="">-Choose A Workout-</option>
-
+            
             <option data-group='Shoulders' value="Military Press">Military Press</option>
             <option data-group='Shoulders' value="Dumbell Press">Dumbell Press</option>
             <option data-group='Shoulders' value="Lateral Raises">Lateral Raises</option>
@@ -78,7 +79,7 @@
             <option data-group='Shoulders' value="Machine Military Press">Machine Military Press</option>
             <option data-group='Shoulders' value="Upright Rows">Upright Rows</option>
             <option data-group='Shoulders' value="">-Choose A Workout-</option>
-
+            
             <option data-group='Abs' value="Crunches">Crunches</option>
             <option data-group='Abs' value="Sit ups">Sit ups</option>
             <option data-group='Abs' value="Leg Raises">Leg Raises</option>
@@ -87,7 +88,7 @@
             <option data-group='Abs' value="Russian Twists">Russian Twists</option>
             <option data-group='Abs' value="Cable Crunches">Cable Crunches</option>
             <option data-group='Abs' value="">-Choose A Workout-</option>
-
+            
             <option data-group='Arms' value="Barbell Curls (Flat)">Barbell Curls (Flat)</option>
             <option data-group='Arms' value="Barbell Curls (EZ)">Barbell Curls (EZ)</option>
             <option data-group='Arms' value="Dumbell Curls (Flat)">Dumbell Curls (Flat)</option>
@@ -106,9 +107,6 @@
           <br>
 
           <br>
-          <!-- <p class="cool-font">User Name</p>
-          <input class="form-control" type="text" id="userName" placeholder="Enter Your Name">
-          <br> -->
           <p class="cool-font">Weight</p>
           <input class="form-control" type="text" id="weight" placeholder="Enter Weight Used">
           <br>
@@ -129,7 +127,7 @@
           <div id="work-area"></div>
         </div>
       </div>
-
+        <canvas id="myChart" width="400" height="400">
     </div>
 
   <script type="text/javascript" src="js/index.js"></script>
