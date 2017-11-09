@@ -9,7 +9,7 @@ var Sequelize = require("sequelize");
 // if(process.env.JAWSDB_URL) {
 //     connection = mysql.createConnection(process.env.JAWSDB_URL);
 // } else{
-    var sequelize = new Sequelize("sequelize_work", "root", "karpal3473", {
+    var sequelize = new Sequelize("sequelize_work", "root", "", {
   host: "localhost",
   dialect: "mysql",
   pool: {
