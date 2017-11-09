@@ -1,5 +1,50 @@
 var userInput;
 
+$("#getBtn").on("click", function(event) {
+  event.preventDefault();
+
+  $.get("/api/all", function(data) {
+
+    var weightArray = [];
+
+  for (var i= 0; i<data.length; i++){
+    weightArray.push(data[i].weight)
+    
+  }
+
+  console.log(weightArray)
+
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        datasets: [{
+            label: 'My Workout',
+            data: weightArray,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.1)',
+                'rgba(54, 162, 235, 0.1)',
+
+                'rgba(255, 159, 64, 0.2)'
+            ],
+
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:false
+                }
+            }]
+        }
+    }
+});
+
+})
+  })
+
 
 $("#submit-btn").on("click", function(event) {
   event.preventDefault();
@@ -20,33 +65,6 @@ $("#submit-btn").on("click", function(event) {
 
 
 
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ["1", "2", "3", "4", "5", "6"],
-        datasets: [{
-            label: 'My Workout',
-            data: [135, 170, 185, 200, userInput.weight],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.1)',
-                'rgba(54, 162, 235, 0.1)',
-
-                'rgba(255, 159, 64, 0.2)'
-            ],
-
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:false
-                }
-            }]
-        }
-    }
-});
 
 
 
@@ -82,6 +100,8 @@ $("#submit-btn").on("click", function(event) {
 
 $.get("/api/all", function(data) {
 
+
+
   if (data.length !== 0) {
 
     for (var i = 0; i < data.length; i++) {
@@ -96,6 +116,8 @@ $.get("/api/all", function(data) {
       row.append("<p> --------------- </p>");
 
       $("#work-area").prepend(row);
+
+
 
     }
 
