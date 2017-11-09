@@ -24,10 +24,10 @@ $("#submit-btn").on("click", function(event) {
     var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        labels: ["1", "2", "3", "4", "5", "6"],
         datasets: [{
             label: 'My Workout',
-            data: [userInput.weight, userInput.reps, userInput.sets],
+            data: [135, 170, 185, 200, userInput.weight],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.1)',
                 'rgba(54, 162, 235, 0.1)',
